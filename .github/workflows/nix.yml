@@ -13,7 +13,7 @@ on:
 
 jobs:
   publish:
-    uses: pawprnt/nixpkgs/.github/workflows/nix-publish.yml@main
+    uses: pawprnt/.github/.github/workflows/nix-publish.yml@main
     with:
       pkgname: nx
       nixpkgs-repo: pawprnt/nixpkgs
