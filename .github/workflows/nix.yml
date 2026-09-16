@@ -1,0 +1,17 @@
+name: Publish to nixpkgs
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    uses: pawprnt/nixpkgs/.github/workflows/nix-publish.yml@main
+    with:
+      pkgname: nx
+      nixpkgs-repo: pawprnt/nixpkgs
+      nix-path: nix/default.nix
+      version: ${{ github.ref_name }}
+    secrets:
+      NIX_GITHUB_TOKEN: ${{ secrets.NIX_GITHUB_TOKEN }}
