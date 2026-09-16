@@ -1,0 +1,21 @@
+[package]
+name = "nx"
+description = "A nix helper CLI"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "nx"
+path = "src/main.rs"
+
+[dependencies]
+nx-core = { path = "../nx-core" }
+nx-nixos = { path = "../nx-nixos" }
+nx-clean = { path = "../nx-clean" }
+nx-search = { path = "../nx-search" }
+clap.workspace = true
+clap-verbosity-flag.workspace = true
+color-eyre.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+log = "0.4"

@@ -1,0 +1,17 @@
+[package]
+name = "nx-core"
+description = "Shared utilities for the nx nix helper"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+clap.workspace = true
+color-eyre.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+yansi.workspace = true
+indicatif.workspace = true
+which = "7"
+nix = { version = "0.31", features = ["user", "fs", "hostname"] }
+chrono = "0.4"
+dirs = "6"
